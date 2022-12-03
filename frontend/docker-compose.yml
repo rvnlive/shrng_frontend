@@ -1,0 +1,27 @@
+version: "3.9" # optional since v1.27.0
+services:
+    client:
+        build:
+            args:
+                user: dev
+                uid: 1000
+            context: ./client
+            dockerfile: Dockerfile
+        working_dir: /var/www
+        environment:
+            - CHOKIDAR_USEPOLLING=${CHOKIDAR_USEPOLLING:-false}
+        restart: unless-stopped
+        ports:
+            - 8080:8080
+        volumes:
+            - ./client:/var/www
+            - node_modules:/var/www/node_modules
+        command: npm run dev
+
+networks:
+    default:
+        external: true
+        name: social-media-v2
+
+volumes:
+    node_modules:
