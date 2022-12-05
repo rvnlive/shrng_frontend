@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.0.1",
   "description": "Social Media app built with Quasar with Vite",
-  "productName": "Social Media App",
+  "productName": "Shrng",
   "author": "Richard Oven",
   "private": true,
   "scripts": {

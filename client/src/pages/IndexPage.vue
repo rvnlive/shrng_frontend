@@ -1,17 +1,14 @@
 <template>
   <q-page class="flex flex-center">
-    <img
+    <!-- <img
       alt="Quasar logo"
       src="~assets/quasar-logo-vertical.svg"
       style="width: 200px; height: 200px"
-    >
+    > -->
+    <!-- <div class="brand-logo"> -->
+
+    <!-- </div> -->
   </q-page>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'IndexPage'
-})
-</script>
+<style lang="scss"></style>

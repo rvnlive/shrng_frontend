@@ -10,7 +10,6 @@
 
 const { configure } = require('quasar/wrappers')
 const path = require('path')
-// const { Components } = require('unplugin-vue-components/vite')
 const { QuasarResolver } = require('unplugin-vue-components/resolvers')
 
 module.exports = configure(function (/* ctx */) {
@@ -56,7 +55,7 @@ module.exports = configure(function (/* ctx */) {
         node: 'node16'
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -139,7 +138,7 @@ module.exports = configure(function (/* ctx */) {
             include: [
               /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
               /\.vue$/,
-              /\.vue\?vue/, // .vue
+              /\.vue\?vue/ // .vue
               // /\.md$/ // .md
             ],
 
@@ -234,7 +233,7 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: ['BottomSheet']
+      plugins: ['BottomSheet', 'Dialog']
     },
 
     // animations: 'all', // --- includes all animations
