@@ -102,7 +102,7 @@ module.exports = configure(function (/* ctx */) {
             // generate `components.d.ts` global declarations,
             // also accepts a path for custom filename
             // default: `true` if package typescript is installed
-            dts: false,
+            dts: true,
 
             // Allow subdirectories as namespace prefix for components.
             directoryAsNamespace: false,
@@ -168,7 +168,7 @@ module.exports = configure(function (/* ctx */) {
               // }
             ],
             // Enable auto import by filename for default module exports under directories
-            defaultExportByFilename: false,
+            defaultExportByFilename: true,
 
             // Auto import for module exports under directories
             // by default it only scan one level of modules under the directory
@@ -182,8 +182,8 @@ module.exports = configure(function (/* ctx */) {
             // Filepath to generate corresponding .d.ts file.
             // Defaults to './auto-imports.d.ts' when `typescript` is installed locally.
             // Set `false` to disable.
-            // dts: './auto-imports.d.ts',
-            dts: false,
+            dts: './auto-imports.d.ts',
+            // dts: true,
 
             // Auto import inside Vue template
             // see https://github.com/unjs/unimport/pull/15 and https://github.com/unjs/unimport/pull/72
@@ -198,7 +198,7 @@ module.exports = configure(function (/* ctx */) {
             // Generate corresponding .eslintrc-auto-import.json file.
             // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
             eslintrc: {
-              enabled: false, // Default `false`
+              enabled: true, // Default `false`
               filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
               globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
             }
@@ -233,7 +233,7 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: ['BottomSheet', 'Dialog']
+      plugins: []
     },
 
     // animations: 'all', // --- includes all animations

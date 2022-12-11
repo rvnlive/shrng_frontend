@@ -4,13 +4,14 @@
       <!-- <AppToolbar /> -->
     </q-header>
     <!-- <AppDrawer /> -->
-    <BottomSheet :dynamic-component="WelcomeCarousel" :persistent="true" :seamless="true" />
+    <!-- <BottomSheet :dynamic-component="GlobalCarousel" :persistent="true" :seamless="true" /> -->
     <q-page-container>
       <router-view />
     </q-page-container>
+    <BottomSheet :dynamic-component="GlobalCarousel" :persistent="true" :seamless="true" />
   </q-layout>
 </template>
 
 <script setup>
-import WelcomeCarousel from 'src/components/landingPages/WelcomeCarousel.vue'
+import GlobalCarousel from 'src/components/global/GlobalCarousel.vue'
 </script>

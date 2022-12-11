@@ -42,5 +42,8 @@ jobs:
       # - name: Run unit-test
       #   run: npm run test:unit
 
+      - name: Run type-check
+        run: npm run type-check
+
       - name: Run build
         run: npm run build

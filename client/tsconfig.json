@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    //   "target": "esnext",
+    //   "module": "esnext",
+    //   "strict": true,
+    //   "jsx": "preserve",
+    //   "moduleResolution": "node",
+    //   "skipLibCheck": true,
+    //   "esModuleInterop": true,
+    //   "allowSyntheticDefaultImports": true,
+    //   "forceConsistentCasingInFileNames": true,
+    //   "useDefineForClassFields": true,
+    //   "sourceMap": true,
+    //   "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "*": ["src/*"],
+      "src/*": ["src/*"],
+      "app/*": ["*"],
+      "components/*": ["src/components/*"],
+      "layouts/*": ["src/layouts/*"],
+      "pages/*": ["src/pages/*"],
+      "assets/*": ["src/assets/*"],
+      "boot/*": ["src/boot/*"],
+      "stores/*": ["src/stores/*"],
+      "vue$": ["node_modules/vue/dist/vue.runtime.esm-bundler.js"]
+    },
+    "include": ["*.d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "exclude": ["dist", ".quasar", "node_modules"]
+    //   "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "files": ["src/typings/ts-shim.d.ts"],
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ]
+}

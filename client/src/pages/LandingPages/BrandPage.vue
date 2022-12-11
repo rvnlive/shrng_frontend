@@ -6,6 +6,7 @@
       src="~assets/SVG/brand/logo/logo_transparentwhite.svg"
       :ratio="1 / 1" />
     <q-img class="brand-text q-mt-" alt="Shrng text" src="~assets/SVG/brand/text/text_white.svg" />
+    <LoginForm />
   </q-layout>
 </template>
 <script setup>
@@ -18,30 +19,26 @@ onMounted(() => {
   showBottomSheet.value = true
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
   showBottomSheet.value = false
 })
 </script>
 <style lang="scss">
 @mixin gradient-background {
-  background: linear-gradient(40deg, #08acee 0%, #b721ff 80%, #9708cc 100%);
-  background: -webkit-linear-gradient(40deg, #08acee 0%, #b721ff 80%, #9708cc 100%);
-  background: -moz-linear-gradient(40deg, #08acee 0%, #b721ff 80%, #9708cc 100%);
-  background: -o-linear-gradient(40deg, #08acee 0%, #b721ff 80%, #9708cc 100%);
-  background-size: 150% 150%;
-  animation: gradient-animation 8s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background: #a6316d; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, $primary 0%, $secondary 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    $primary 0%,
+    $secondary 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    $primary 0%,
+    $secondary 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6316d', endColorstr='#03398a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .landing-page {
@@ -51,7 +48,7 @@ onUnmounted(() => {
 
   .brand-logo {
     width: 12rem;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.75));
+    filter: drop-shadow(2px 2px 35px rgba(0, 0, 0, 0.5));
   }
   .brand-text {
     margin-top: -1.5rem;
