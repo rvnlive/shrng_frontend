@@ -1,3 +1,6 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
   // https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy
   // This option interrupts the configuration hierarchy at this file
@@ -5,7 +8,7 @@ module.exports = {
   root: true,
 
   parserOptions: {
-    ecmaVersion: '2021', // Allows for the parsing of modern ECMAScript features
+    ecmaVersion: '2021' // Allows for the parsing of modern ECMAScript features
   },
 
   env: {
@@ -28,18 +31,18 @@ module.exports = {
 
     // https://github.com/prettier/eslint-config-prettier#installation
     // usage with Prettier, provided by 'eslint-config-prettier'.
-    'prettier'
+    '@vue/eslint-config-typescript/recommended',
+    '@vue/eslint-config-prettier'
   ],
 
   plugins: [
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-files
     // required to lint *.vue files
-    'vue',
-    
+    'vue'
+
     // https://github.com/typescript-eslint/typescript-eslint/issues/389#issuecomment-509292674
     // Prettier has not been included as plugin to avoid performance impact
     // add it as an extension for your IDE
-    
   ],
 
   globals: {
@@ -57,7 +60,6 @@ module.exports = {
 
   // add your custom rules here
   rules: {
-    
     'prefer-promise-reject-errors': 'off',
 
     // allow debugger during development only
